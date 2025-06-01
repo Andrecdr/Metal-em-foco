@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metal em Foco | Blog & Arte</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #1f1f1f, #3a3a3a);
+      padding: 2rem;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1605792657660-e7c1b207da6e?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    nav {
+      background: #222;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3c00;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff3c00;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-post {
+      background: #1a1a1a;
+      border-left: 5px solid #ff3c00;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post h3 {
+      margin-top: 0;
+      color: #ff3c00;
+    }
+
+    .blog-post small {
+      color: #888;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    img.illustration {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Metal em Foco</h1>
+    <p>Arte e blog sobre o universo do Heavy Metal</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#blog">Blog</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre o Projeto</h2>
+    <p>Este é um espaço para compartilhar minha arte inspirada no universo do Heavy Metal e escrever sobre bandas lendárias como Iron Maiden, Judas Priest, Black Sabbath e outras que moldaram a história do som pesado.</p>
+    <img class="illustration" src="https://images.unsplash.com/photo-1548691938-78b8f15f4471?auto=format&fit=crop&w=1600&q=80" alt="Ilustração temática de heavy metal">
+  </section>
+
+  <section id="blog">
+    <h2>Últimos Posts</h2>
+
+    <div class="blog-post">
+      <h3>Iron Maiden: Uma Jornada no Tempo</h3>
+      <small>Publicado em 1 de Junho de 2025</small>
+      <p>Exploramos a carreira do Iron Maiden, desde os primeiros álbuns com Paul Di'Anno até os épicos modernos com Bruce Dickinson. Uma banda que transcende gerações e continua poderosa nos palcos.</p>
+    </div>
+
+    <div class="blog-post">
+      <h3>As 5 capas mais icônicas do Metal</h3>
+      <small>Publicado em 28 de Maio de 2025</small>
+      <p>De "The Number of the Beast" a "Master of Puppets", conheça as artes de capa que marcaram época e ajudaram a definir a estética visual do Heavy Metal.</p>
+    </div>
+
+    <div class="blog-post">
+      <h3>Judas Priest: Metal Gods em ação</h3>
+      <small>Publicado em 20 de Maio de 2025</small>
+      <p>Com riffs afiados e vocais inconfundíveis, o Judas Priest foi pioneiro no som e no visual que definiriam o estilo clássico do metal dos anos 80.</p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Quer trocar uma ideia, colaborar em um projeto ou só bater papo sobre metal? Manda um e-mail para: <strong>seuemail@exemplo.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Metal em Foco. Arte, atitude e barulho.</p>
+  </footer>
+
+</body>
+</html>
