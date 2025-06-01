@@ -1,107 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Metal em Foco | Blog & Arte</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metal em Foco | Arte, Som & Alma</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #eee;
-      line-height: 1.6;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+    }
+
+    a {
+      color: #ff4400;
+      text-decoration: none;
     }
 
     header {
-      background: linear-gradient(to right, #1f1f1f, #3a3a3a);
-      padding: 2rem;
-      text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1605792657660-e7c1b207da6e?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
+      background: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
       color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       margin: 0;
-      text-shadow: 2px 2px 4px #000;
+      text-shadow: 2px 2px 10px #000;
     }
 
     header p {
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 3px #000;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 1px 1px 5px #000;
     }
 
     nav {
-      background: #222;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       padding: 1rem;
-      text-align: center;
+      border-bottom: 1px solid #222;
     }
 
     nav a {
       color: #ccc;
-      margin: 0 1rem;
-      text-decoration: none;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #ff3c00;
+      color: #ff4400;
     }
 
     section {
-      padding: 2rem;
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      border-bottom: 2px solid #ff3c00;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #ff4400;
+      display: inline-block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .blog-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
     .blog-post {
-      background: #1a1a1a;
-      border-left: 5px solid #ff3c00;
+      background-color: #1a1a1a;
+      border-left: 5px solid #ff4400;
       padding: 1rem;
-      margin-bottom: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #000;
     }
 
     .blog-post h3 {
       margin-top: 0;
-      color: #ff3c00;
+      color: #ff4400;
     }
 
-    .blog-post small {
-      color: #888;
+    .discografia {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .album {
+      flex: 1 1 250px;
+      background: #1f1f1f;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    .album img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 5px;
     }
 
     footer {
-      background: #000;
+      background-color: #111;
       color: #aaa;
       text-align: center;
       padding: 2rem;
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
-    img.illustration {
-      width: 100%;
-      max-width: 700px;
-      display: block;
-      margin: 2rem auto;
-      border-radius: 10px;
+    .social {
+      margin-top: 1rem;
+    }
+
+    .social a {
+      margin: 0 0.5rem;
+      color: #ff4400;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
-      nav {
-        font-size: 0.9rem;
+      header p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -110,50 +160,87 @@
 
   <header>
     <h1>Metal em Foco</h1>
-    <p>Arte e blog sobre o universo do Heavy Metal</p>
+    <p>Arte, som e atitude nas veias do heavy metal</p>
   </header>
 
   <nav>
     <a href="#sobre">Sobre</a>
+    <a href="#galeria">Galeria</a>
     <a href="#blog">Blog</a>
+    <a href="#discografia">Discografia</a>
+    <a href="#videos">Vídeos</a>
     <a href="#contato">Contato</a>
   </nav>
 
   <section id="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>Este é um espaço para compartilhar minha arte inspirada no universo do Heavy Metal e escrever sobre bandas lendárias como Iron Maiden, Judas Priest, Black Sabbath e outras que moldaram a história do som pesado.</p>
-    <img class="illustration" src="https://images.unsplash.com/photo-1548691938-78b8f15f4471?auto=format&fit=crop&w=1600&q=80" alt="Ilustração temática de heavy metal">
+    <h2>Sobre Mim</h2>
+    <p>Sou um artista visual e apaixonado por heavy metal. Este site é onde cruzo minha arte com minha paixão pelas bandas que moldaram o som pesado — como Iron Maiden, Black Sabbath, Judas Priest e tantas outras que marcaram gerações.</p>
+    <p>Minha arte é crua, intensa e barulhenta — como o metal deve ser. Seja bem-vindo ao espaço onde riffs viram pinceladas e capas de álbuns ganham novas interpretações visuais.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria de Artes</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?auto=format&fit=crop&w=700&q=80" alt="Arte 1">
+      <img src="https://images.unsplash.com/photo-1558449033-720e0e6b3b54?auto=format&fit=crop&w=700&q=80" alt="Arte 2">
+      <img src="https://images.unsplash.com/photo-1507878866276-a947ef722fee?auto=format&fit=crop&w=700&q=80" alt="Arte 3">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=700&q=80" alt="Arte 4">
+    </div>
   </section>
 
   <section id="blog">
     <h2>Últimos Posts</h2>
-
-    <div class="blog-post">
-      <h3>Iron Maiden: Uma Jornada no Tempo</h3>
-      <small>Publicado em 1 de Junho de 2025</small>
-      <p>Exploramos a carreira do Iron Maiden, desde os primeiros álbuns com Paul Di'Anno até os épicos modernos com Bruce Dickinson. Uma banda que transcende gerações e continua poderosa nos palcos.</p>
+    <div class="blog-posts">
+      <div class="blog-post">
+        <h3>Iron Maiden: A Era de Powerslave</h3>
+        <p>Em 1984, a banda elevou o metal a patamares épicos com temáticas egípcias e solos imortais. Um mergulho visual e sonoro nesse clássico.</p>
+      </div>
+      <div class="blog-post">
+        <h3>A Revolução do Metal nos anos 80</h3>
+        <p>O nascimento do visual leather & spikes, a explosão do thrash e o impacto cultural que ainda ecoa hoje. Um panorama da década mais pesada da música.</p>
+      </div>
+      <div class="blog-post">
+        <h3>10 Capas Icônicas e Seus Significados</h3>
+        <p>Algumas artes de álbuns não são apenas ilustrações — são mensagens visuais. Veja como a estética metal define identidade.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="blog-post">
-      <h3>As 5 capas mais icônicas do Metal</h3>
-      <small>Publicado em 28 de Maio de 2025</small>
-      <p>De "The Number of the Beast" a "Master of Puppets", conheça as artes de capa que marcaram época e ajudaram a definir a estética visual do Heavy Metal.</p>
+  <section id="discografia">
+    <h2>Discografia Ilustrada</h2>
+    <div class="discografia">
+      <div class="album">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Iron_Maiden_-_Powerslave.jpg" alt="Powerslave">
+        <strong>Powerslave (1984)</strong>
+        <p>Uma das artes mais complexas do metal, cheia de hieróglifos e referências egípcias.</p>
+      </div>
+      <div class="album">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Iron_Maiden_-_The_Number_of_the_Beast.jpg" alt="Number of the Beast">
+        <strong>The Number of the Beast (1982)</strong>
+        <p>O Eddie mais demoníaco e a introdução do terror visual no som da banda.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="blog-post">
-      <h3>Judas Priest: Metal Gods em ação</h3>
-      <small>Publicado em 20 de Maio de 2025</small>
-      <p>Com riffs afiados e vocais inconfundíveis, o Judas Priest foi pioneiro no som e no visual que definiriam o estilo clássico do metal dos anos 80.</p>
-    </div>
+  <section id="videos">
+    <h2>Vídeos</h2>
+    <p>Assista a clipes, shows e entrevistas que marcaram o heavy metal:</p>
+    <iframe src="https://www.youtube.com/embed/qX6FsPZ1z1o" title="Iron Maiden - The Trooper (Live)"></iframe>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Quer trocar uma ideia, colaborar em um projeto ou só bater papo sobre metal? Manda um e-mail para: <strong>seuemail@exemplo.com</strong></p>
+    <p>Quer trocar ideias, colaborações ou encomendar uma arte? Entre em contato:</p>
+    <p><strong>Email:</strong> metalfoco@exemplo.com</p>
+    <div class="social">
+      <a href="https://instagram.com" target="_blank">📸</a>
+      <a href="https://youtube.com" target="_blank">▶️</a>
+      <a href="https://twitter.com" target="_blank">🐦</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Metal em Foco. Arte, atitude e barulho.</p>
+    <p>&copy; 2025 Metal em Foco — Arte e Metal sem limites.</p>
   </footer>
 
 </body>
